@@ -1,0 +1,907 @@
+
+/* =====================================
+   HAPPY DIWALI - PREMIUM CSS DESIGN
+===================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --gold: #ffd166;
+    --gold-light: #fff1b8;
+    --orange: #ff8c24;
+    --red: #ff4d3d;
+    --dark: #080b20;
+    --purple: #21113d;
+    --white: #fffaf0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--white);
+    background:
+        radial-gradient(ellipse at 50% 20%, #38204f 0%, transparent 45%),
+        linear-gradient(135deg, #080b20, #160d2c 55%, #080b20);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* BACKGROUND */
+
+.background {
+    position: fixed;
+    inset: 0;
+    z-index: -5;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.moon {
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    top: 12%;
+    right: 12%;
+    border-radius: 50%;
+    background: #fff1bb;
+    box-shadow:
+        0 0 30px #ffd166,
+        0 0 80px #ffb347,
+        0 0 150px #ff8c24;
+    animation: moonGlow 4s ease-in-out infinite alternate;
+}
+
+@keyframes moonGlow {
+    from { box-shadow: 0 0 25px #ffd166, 0 0 60px #ffb347; }
+    to { box-shadow: 0 0 45px #fff1b8, 0 0 120px #ff8c24; }
+}
+
+.stars {
+    position: absolute;
+    inset: 0;
+    background-image:
+        radial-gradient(2px 2px at 20% 30%, white 50%, transparent),
+        radial-gradient(2px 2px at 70% 20%, #ffd166 50%, transparent),
+        radial-gradient(2px 2px at 40% 70%, white 50%, transparent),
+        radial-gradient(2px 2px at 85% 65%, #ffd166 50%, transparent),
+        radial-gradient(2px 2px at 10% 80%, white 50%, transparent);
+    background-size: 250px 250px;
+    animation: starsMove 20s linear infinite;
+}
+
+@keyframes starsMove {
+    to { background-position: 250px 250px; }
+}
+
+.glow {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: .35;
+}
+
+.glow-one {
+    background: #ff7b00;
+    top: 40%;
+    left: -150px;
+}
+
+.glow-two {
+    background: #a020f0;
+    right: -150px;
+    bottom: 5%;
+}
+
+/* CANVAS */
+
+#fireworks,
+#magicCanvas {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+#fireworks {
+    z-index: 10;
+}
+
+#magicCanvas {
+    z-index: 11;
+}
+
+/* NAVBAR */
+
+.navbar {
+    width: 100%;
+    min-height: 75px;
+    padding: 15px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 20;
+    background: rgba(8, 11, 32, .55);
+    border-bottom: 1px solid rgba(255, 209, 102, .2);
+    backdrop-filter: blur(15px);
+}
+
+.logo {
+    font-family: 'Cinzel', serif;
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--gold);
+    letter-spacing: 1px;
+    text-shadow: 0 0 15px rgba(255, 209, 102, .6);
+}
+
+.nav-controls {
+    display: flex;
+    gap: 12px;
+}
+
+.nav-btn {
+    border: 1px solid rgba(255, 209, 102, .45);
+    background: rgba(255, 209, 102, .08);
+    color: var(--gold);
+    padding: 9px 15px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .3s;
+    font-size: 14px;
+}
+
+.nav-btn:hover {
+    background: var(--gold);
+    color: #160d2c;
+    box-shadow: 0 0 20px rgba(255, 209, 102, .5);
+    transform: translateY(-3px);
+}
+
+/* HERO SECTION */
+
+.hero {
+    min-height: 90vh;
+    padding: 80px 20px 65px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.festival-tag {
+    display: inline-block;
+    padding: 9px 22px;
+    color: var(--gold-light);
+    border: 1px solid rgba(255, 209, 102, .55);
+    border-radius: 50px;
+    background: rgba(255, 209, 102, .09);
+    letter-spacing: 3px;
+    font-size: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 0 25px rgba(255, 209, 102, .12);
+}
+
+.main-title {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(48px, 9vw, 105px);
+    line-height: 1.2;
+    font-weight: 800;
+    background: linear-gradient(
+        180deg,
+        #fff8cf 5%,
+        #ffd166 40%,
+        #ff8c24 75%,
+        #ff4d3d
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    filter: drop-shadow(0 5px 20px rgba(255, 140, 36, .35));
+    animation: titleAppear 1.3s ease both;
+}
+
+@keyframes titleAppear {
+    from { opacity: 0; transform: translateY(35px) scale(.9); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.title-decoration {
+    width: 180px;
+    height: 3px;
+    margin: 22px auto;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    box-shadow: 0 0 15px var(--gold);
+}
+
+.hero-message {
+    max-width: 650px;
+    margin: 15px auto 25px;
+    color: #e8dff4;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+/* DIYA */
+
+.diya-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    margin: 30px 0;
+}
+
+.diya {
+    width: 75px;
+    height: 35px;
+    position: relative;
+    background: linear-gradient(180deg, #ffdc75, #bd4215);
+    border-radius: 10px 10px 45px 45px;
+    box-shadow: 0 10px 25px rgba(255, 112, 0, .4);
+}
+
+.diya-main {
+    width: 105px;
+    height: 48px;
+}
+
+.diya-small {
+    transform: scale(.75);
+}
+
+.flame {
+    position: absolute;
+    width: 20px;
+    height: 34px;
+    background: linear-gradient(to top, #ff5b00, #ffdf73, white);
+    border-radius: 50% 50% 50% 50%;
+    top: -36px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 15px #ffae00, 0 0 35px #ff5b00;
+    animation: flameDance .7s infinite alternate;
+}
+
+@keyframes flameDance {
+    from { transform: translateX(-50%) rotate(-7deg) scale(.95); }
+    to { transform: translateX(-50%) rotate(7deg) scale(1.08); }
+}
+
+/* PERSONAL WISH */
+
+.personal-wish {
+    width: min(90%, 550px);
+    padding: 25px;
+    margin-top: 20px;
+    border: 1px solid rgba(255, 209, 102, .3);
+    background: rgba(255, 255, 255, .045);
+    border-radius: 20px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, .2);
+}
+
+.personal-wish input {
+    width: 100%;
+    padding: 13px 17px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 209, 102, .35);
+    outline: none;
+    color: white;
+    background: rgba(0, 0, 0, .25);
+    font-family: inherit;
+    margin: 12px 0;
+}
+
+.personal-wish input::placeholder {
+    color: #c7b8d6;
+}
+
+#personalMessage {
+    color: var(--gold-light);
+    margin-top: 15px;
+    line-height: 1.7;
+}
+
+/* BUTTONS */
+
+.primary-btn,
+.secondary-btn {
+    padding: 14px 27px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 8px;
+    transition: .35s;
+}
+
+.primary-btn {
+    color: #321600;
+    background: linear-gradient(135deg, #fff1b8, #ffb52e, #ff7b18);
+    box-shadow: 0 7px 25px rgba(255, 140, 36, .3);
+}
+
+.secondary-btn {
+    color: var(--gold-light);
+    background: rgba(255, 255, 255, .06);
+    border: 1px solid rgba(255, 209, 102, .5);
+}
+
+.primary-btn:hover,
+.secondary-btn:hover {
+    transform: translateY(-5px) scale(1.04);
+    box-shadow: 0 10px 35px rgba(255, 166, 0, .4);
+}
+
+.scroll-indicator {
+    margin-top: 55px;
+    color: var(--gold);
+    font-size: 13px;
+    animation: float 2s infinite ease-in-out;
+}
+
+@keyframes float {
+    50% { transform: translateY(10px); }
+}
+
+/* SECTION COMMON */
+
+.gift-section,
+.celebration-section,
+.rangoli-section,
+.share-section {
+    padding: 80px 7%;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.section-heading {
+    font-family: 'Cinzel', serif;
+    color: var(--gold);
+    font-size: clamp(27px, 5vw, 42px);
+    margin-bottom: 15px;
+}
+
+.section-heading::after {
+    content: "";
+    display: block;
+    width: 75px;
+    height: 3px;
+    margin: 15px auto 35px;
+    background: var(--gold);
+    box-shadow: 0 0 15px var(--gold);
+}
+
+/* GIFT CARD */
+
+.gift-card {
+    display: none;
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 40px 25px;
+    border: 1px solid rgba(255, 209, 102, .4);
+    border-radius: 25px;
+    background: linear-gradient(145deg, rgba(255, 209, 102, .12), rgba(255, 255, 255, .04));
+    box-shadow: 0 15px 50px rgba(0, 0, 0, .3);
+    animation: giftOpen .7s ease both;
+}
+
+.gift-card.show {
+    display: block;
+}
+
+@keyframes giftOpen {
+    from { opacity: 0; transform: scale(.75) translateY(30px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.gift-icon {
+    font-size: 65px;
+    margin-bottom: 15px;
+    animation: giftBounce 2s infinite;
+}
+
+@keyframes giftBounce {
+    50% { transform: translateY(-10px) rotate(5deg); }
+}
+
+/* FEATURE CARDS */
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.feature-card {
+    padding: 35px 22px;
+    background: rgba(255, 255, 255, .045);
+    border: 1px solid rgba(255, 209, 102, .2);
+    border-radius: 22px;
+    transition: .35s;
+    backdrop-filter: blur(10px);
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--gold);
+    background: rgba(255, 209, 102, .09);
+    box-shadow: 0 15px 40px rgba(255, 140, 36, .12);
+}
+
+.feature-icon {
+    font-size: 45px;
+    margin-bottom: 18px;
+}
+
+.feature-card h3 {
+    color: var(--gold);
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    color: #d3c9df;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* RANGOLI */
+
+.rangoli-container {
+    display: flex;
+    justify-content: center;
+    margin: 35px auto;
+}
+
+.rangoli {
+    width: 230px;
+    height: 230px;
+    border: 4px dotted var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 0 25px rgba(255, 209, 102, .3);
+    animation: rangoliRotate 25s linear infinite;
+}
+
+.rangoli::before,
+.rangoli::after {
+    content: "✿";
+    position: absolute;
+    font-size: 80px;
+    color: #ff9d36;
+}
+
+.rangoli::before {
+    top: -12px;
+}
+
+.rangoli::after {
+    bottom: -12px;
+}
+
+.rangoli-inner {
+    width: 150px;
+    height: 150px;
+    border: 3px dashed #ff6e52;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rangoli-center {
+    width: 85px;
+    height: 85px;
+    background: radial-gradient(circle, #fff1b8, #ff9c24, #e33b21);
+    border-radius: 50%;
+    box-shadow: 0 0 35px #ff9c24;
+}
+
+@keyframes rangoliRotate {
+    to { transform: rotate(360deg); }
+}
+
+.rangoli-message {
+    color: var(--gold-light);
+    margin-top: 25px;
+}
+
+/* SHARE SECTION */
+
+.share-section p {
+    color: #d3c9df;
+    margin-bottom: 20px;
+}
+
+/* FALLING FLOWERS */
+
+#flowerContainer {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 12;
+}
+
+.flower {
+    position: absolute;
+    top: -40px;
+    font-size: 22px;
+    animation: flowerFall linear forwards;
+}
+
+@keyframes flowerFall {
+    to {
+        transform: translateY(110vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+/* FOOTER */
+
+.footer {
+    text-align: center;
+    padding: 30px 15px;
+    background: rgba(0, 0, 0, .3);
+    border-top: 1px solid rgba(255, 209, 102, .2);
+    color: #bfb4cf;
+    font-size: 13px;
+}
+
+.footer-logo {
+    font-family: 'Cinzel', serif;
+    color: var(--gold);
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.copyright {
+    margin-top: 10px;
+    opacity: .7;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 13px 5%;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .logo {
+        font-size: 17px;
+    }
+
+    .nav-btn {
+        padding: 8px 11px;
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: 85vh;
+        padding: 65px 15px;
+    }
+
+    .main-title {
+        font-size: clamp(43px, 12vw, 72px);
+    }
+
+    .hero-message {
+        font-size: 14px;
+    }
+
+    .moon {
+        width: 75px;
+        height: 75px;
+        right: 8%;
+        top: 10%;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+        max-width: 430px;
+    }
+
+    .gift-section,
+    .celebration-section,
+    .rangoli-section,
+    .share-section {
+        padding: 60px 18px;
+    }
+
+    .personal-wish {
+        padding: 20px 15px;
+    }
+
+    .diya-container {
+        gap: 20px;
+    }
+
+    .rangoli {
+        width: 190px;
+        height: 190px;
+    }
+}
+
+@media (max-width: 420px) {
+
+    .navbar {
+        justify-content: center;
+    }
+
+    .nav-controls {
+        justify-content: center;
+    }
+
+    .main-title {
+        font-size: 39px;
+    }
+
+    .festival-tag {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+        padding: 12px 19px;
+        font-size: 12px;
+    }
+
+    .diya {
+        transform: scale(.8);
+    }
+
+    .diya-main {
+        transform: scale(.9);
+    }
+}
+
+/* ACCESSIBILITY */
+
+button:focus-visible,
+input:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+
+/* =================================
+   CREATE MY WISH - PREMIUM BUTTON
+================================= */
+#CloseSurprise,
+#createWishBtn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    padding: 15px 35px;
+    margin-top: 12px;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    color: #381500;
+    background: linear-gradient(
+        135deg,
+        #fff5c2,
+        #ffd166,
+        #ff9d24,
+        #ffca55
+    );
+
+    border: 1px solid #ffe7a0;
+    border-radius: 50px;
+
+    cursor: pointer;
+    overflow: hidden;
+
+    box-shadow:
+        0 5px 15px rgba(255, 166, 0, .25),
+        0 0 25px rgba(255, 193, 7, .25),
+        inset 0 2px 5px rgba(255, 255, 255, .7);
+
+    transition: all .35s ease;
+}
+
+/* Shine effect */
+
+#createWishBtn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 60%;
+    height: 100%;
+
+    background: linear-gradient(
+        110deg,
+        transparent,
+        rgba(255, 255, 255, .85),
+        transparent
+    );
+
+    transform: skewX(-25deg);
+    transition: .7s;
+}
+
+#createWishBtn:hover::before {
+    left: 150%;
+}
+
+/* Hover effect */
+
+#createWishBtn:hover {
+    transform: translateY(-5px) scale(1.04);
+
+    background: linear-gradient(
+        135deg,
+        #fff9dc,
+        #ffdf80,
+        #ffae35
+    );
+
+    box-shadow:
+        0 10px 30px rgba(255, 166, 0, .45),
+        0 0 45px rgba(255, 193, 7, .4);
+}
+
+/* Click effect */
+
+#createWishBtn:active {
+    transform: scale(.94);
+    box-shadow: 0 3px 10px rgba(255, 166, 0, .3);
+}
+
+/* Mobile design */
+
+@media (max-width: 480px) {
+    #createWishBtn {
+        width: 100%;
+        max-width: 280px;
+        padding: 14px 20px;
+        font-size: 14px;
+    }
+}
+
+
+/* =================================
+   CLOSE SURPRISE - PREMIUM BUTTON
+================================= */
+
+#closeGiftBtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    padding: 12px 28px;
+    margin-top: 22px;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: .5px;
+
+    color: #ffe8b0;
+
+    background: linear-gradient(
+        135deg,
+        rgba(255, 77, 61, .15),
+        rgba(255, 140, 36, .12)
+    );
+
+    border: 1px solid rgba(255, 166, 80, .7);
+    border-radius: 50px;
+
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+
+    box-shadow:
+        0 4px 15px rgba(255, 77, 61, .12),
+        inset 0 0 12px rgba(255, 140, 36, .08);
+
+    transition: all .35s ease;
+}
+
+/* Shine effect */
+
+#closeGiftBtn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 60%;
+    height: 100%;
+
+    background: linear-gradient(
+        110deg,
+        transparent,
+        rgba(255, 255, 255, .4),
+        transparent
+    );
+
+    transform: skewX(-25deg);
+    transition: .6s;
+}
+
+#closeGiftBtn:hover::before {
+    left: 150%;
+}
+
+/* Hover */
+
+#closeGiftBtn:hover {
+    color: white;
+
+    background: linear-gradient(
+        135deg,
+        #ff684d,
+        #ed382c,
+        #ff922e
+    );
+
+    border-color: #ffd166;
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 8px 25px rgba(255, 77, 61, .35),
+        0 0 20px rgba(255, 140, 36, .2);
+}
+
+/* Click */
+
+#closeGiftBtn:active {
+    transform: scale(.94);
+}
+
+/* Mobile */
+
+@media (max-width: 480px) {
+    #closeGiftBtn {
+        padding: 11px 24px;
+        font-size: 13px;
+    }
+}

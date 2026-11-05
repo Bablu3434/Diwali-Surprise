@@ -1,0 +1,393 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#080b20">
+
+    <meta name="description"
+        content="Celebrate the festival of lights with a magical Happy Diwali experience.">
+
+    <title>Happy Diwali | Magical Celebration</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Background Effects -->
+    <div class="background">
+
+        <div class="moon"></div>
+
+        <div class="stars"></div>
+
+        <div class="glow glow-one"></div>
+        <div class="glow glow-two"></div>
+
+    </div>
+
+
+    <!-- Animation Canvas -->
+    <canvas id="fireworks"></canvas>
+
+    <canvas id="magicCanvas"></canvas>
+
+
+    <!-- Falling Flowers -->
+    <div id="flowerContainer"></div>
+
+
+    <!-- Navigation -->
+    <header class="navbar">
+
+        <div class="logo">
+            <span>✦</span>
+            DIWALI MAGIC
+        </div>
+
+        <div class="nav-controls">
+
+            <button id="musicBtn" class="nav-btn">
+                ♫ Music OFF
+            </button>
+
+            <button id="themeBtn" class="nav-btn">
+                ✨ Theme
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- Main Hero Section -->
+    <main>
+
+        <section class="hero">
+
+            <div class="festival-tag">
+                <span></span>
+                THE FESTIVAL OF LIGHTS
+                <span></span>
+            </div>
+
+
+            <!-- Diyas -->
+            <div class="diya-container">
+
+                <div class="diya diya-small">
+                    <div class="flame"></div>
+                </div>
+
+                <div class="diya diya-main">
+                    <div class="flame"></div>
+                </div>
+
+                <div class="diya diya-small">
+                    <div class="flame"></div>
+                </div>
+
+            </div>
+
+
+            <p class="welcome-text">
+                A little light, a little happiness,
+                and endless beautiful memories.
+            </p>
+
+
+            <!-- Main Heading -->
+            <h1 class="main-title">
+
+                <span>HAPPY</span>
+
+                <strong>DIWALI</strong>
+
+            </h1>
+
+
+            <div class="title-decoration">
+                ✦ ━━━━━ ✧ ━━━━━ ✦
+            </div>
+
+
+            <p class="hero-message">
+
+                May this Diwali bring endless happiness,
+                prosperity, love and success into your life.
+
+            </p>
+
+
+            <!-- Personal Wish -->
+            <div class="personal-wish">
+
+                <input
+                    type="text"
+                    id="visitorName"
+                    placeholder="Enter your name..."
+                    maxlength="35"
+                >
+
+                <button id="createWishBtn">
+                    Create My Wish ✨
+                </button>
+
+            </div>
+
+
+            <h2 id="personalMessage">
+
+                Welcome to the Diwali Celebration!
+
+            </h2>
+
+
+            <!-- Main Actions -->
+            <div class="hero-buttons">
+
+                <button id="giftBtn" class="primary-btn">
+
+                    🎁 Open Your Surprise
+
+                </button>
+
+
+                <button id="fireworkBtn" class="secondary-btn">
+
+                    🎆 Launch Fireworks
+
+                </button>
+
+            </div>
+
+
+            <div class="scroll-indicator">
+
+                <span></span>
+
+                SCROLL TO EXPLORE
+
+            </div>
+
+        </section>
+
+
+
+        <!-- Gift Surprise Section -->
+        <section class="gift-section">
+
+            <div class="section-heading">
+
+                <p>YOUR SPECIAL MOMENT</p>
+
+                <h2>Something <span>Magical</span> For You</h2>
+
+            </div>
+
+
+            <div id="giftBox" class="gift-card">
+
+                <div class="gift-icon">
+                    🎁
+                </div>
+
+                <h2>A Special Gift For You!</h2>
+
+                <p>
+
+                    May every diya bring new hope,
+                    every sparkle bring happiness,
+                    and every moment become beautiful.
+
+                </p>
+
+                <h3>❤️ HAPPY DIWALI ❤️</h3>
+
+                <button id="closeGiftBtn">
+                    Close Surprise
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- Celebration Features -->
+        <section class="celebration-section">
+
+            <div class="section-heading">
+
+                <p>SHARE THE HAPPINESS</p>
+
+                <h2>Festival Of <span>Joy</span></h2>
+
+            </div>
+
+
+            <div class="feature-grid">
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        🪔
+                    </div>
+
+                    <h3>Light & Hope</h3>
+
+                    <p>
+                        May every diya guide you
+                        towards brighter days.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        🌸
+                    </div>
+
+                    <h3>Love & Happiness</h3>
+
+                    <p>
+                        May your home bloom
+                        with laughter and love.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        ✨
+                    </div>
+
+                    <h3>Success & Dreams</h3>
+
+                    <p>
+                        May every dream
+                        find its way to reality.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- Flowers Button -->
+            <button id="flowerBtn" class="primary-btn">
+
+                🌸 Shower Flowers
+
+            </button>
+
+        </section>
+
+
+
+        <!-- Rangoli Section -->
+        <section class="rangoli-section">
+
+            <div class="section-heading">
+
+                <p>TRADITIONAL BEAUTY</p>
+
+                <h2>Beautiful <span>Rangoli</span></h2>
+
+            </div>
+
+
+            <div class="rangoli-container">
+
+                <div class="rangoli">
+
+                    <div class="rangoli-inner">
+
+                        <div class="rangoli-center">
+                            ✦
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <p class="rangoli-message">
+
+                May your home glow with joy
+                and your heart shine with peace.
+
+            </p>
+
+        </section>
+
+
+
+        <!-- Share Section -->
+        <section class="share-section">
+
+            <h2>Spread The <span>Diwali Magic</span></h2>
+
+            <p>
+                Share happiness with your friends
+                and family.
+            </p>
+
+            <button id="shareBtn" class="primary-btn">
+
+                📲 Share Diwali Wishes
+
+            </button>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="footer-logo">
+            ✦ DIWALI MAGIC ✦
+        </div>
+
+        <p>
+            Made with ❤️ and a little Diwali magic.
+        </p>
+
+        <p class="copyright">
+            © 2026 Happy Diwali Celebration
+        </p>
+
+    </footer>
+
+
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
